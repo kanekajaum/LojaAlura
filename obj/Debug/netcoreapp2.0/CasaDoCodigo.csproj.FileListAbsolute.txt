@@ -14,3 +14,4 @@ C:\Users\Joao - PC\web\Aulas\Aula1\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCo
 C:\Users\Joao - PC\web\Aulas\Aula1\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.dll
 C:\Users\Joao - PC\web\Aulas\Aula1\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.pdb
 C:\Users\Joao - PC\web\Aulas\Aula1\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.genruntimeconfig.cache
+C:\Users\Joao - PC\web\Aulas\Aula1\CasaDoCodigo\bin\Debug\netcoreapp2.0\livros.json
