@@ -29,7 +29,10 @@ namespace CasaDoCodigo.Repositories
         public Pedido GetPedido()
         {
             var pedidoId = GetPedidoId();
-            var pedido = dbSet.Where(x => x.Id == pedidoId)
+            var pedido = dbSet
+                .Include(x => x.Itens)
+                .ThenInclude(i => i.Produto)
+                .Where(x => x.Id == pedidoId)
                 .SingleOrDefault();
             if(pedido == null)
             {
