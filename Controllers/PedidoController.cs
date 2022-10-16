@@ -11,15 +11,18 @@ namespace CasaDoCodigo.Controllers
         private readonly IPedidoRepository pedidoRepository;
         protected readonly ApplicationContext _context;
         protected readonly DbSet<Pedido> dbSet;
+        private readonly IItemPedidoRepository itemPedidoRepository;
 
         public PedidoController(ApplicationContext _context,
             IProdutoRepository produtoRepository,
-            IPedidoRepository pedidoRepository)
+            IPedidoRepository pedidoRepository,
+            IItemPedidoRepository itemPedidoRepository)
         {
             this._context = _context;
             dbSet = _context.Set<Pedido>();
             this.produtoRepository = produtoRepository;
             this.pedidoRepository = pedidoRepository;
+            this.itemPedidoRepository = itemPedidoRepository;
         }
 
         public IActionResult Carrossel()
@@ -51,7 +54,7 @@ namespace CasaDoCodigo.Controllers
         [HttpPost]
         public void UpdateQuantidade([FromBody]ItemPedido itemPedido)
         {
-
+            itemPedidoRepository.UpdateQuantidade(itemPedido);
         }
     }
 }
